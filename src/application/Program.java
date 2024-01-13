@@ -45,6 +45,12 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("Iserted! New Id = " + seller.getId());
+		
+		System.out.println("\n=== Test 5: seller update ===");
+		Seller sellerUpdate = sellerDao.findById(1);
+		sellerUpdate.setName("Gabriel Honorato");
+		sellerDao.update(sellerUpdate);
+		System.out.println("Update complete!");
 	}
 
 }
